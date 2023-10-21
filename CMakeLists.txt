@@ -15,7 +15,7 @@ find_package(glog)
 find_package(double-conversion)
 find_package(fmt)
 
-if(not glog_FOUND or not double-conversion_FOUND or not fmt_FOUND)
+if(NOT glog_FOUND OR NOT double-conversion_FOUND OR NOT fmt_FOUND)
   message(FATAL_ERROR "dependencies not meet")
 endif()
 
