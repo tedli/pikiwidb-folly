@@ -11,14 +11,3 @@ add_compile_definitions(FOLLY_NO_CONFIG)
 
 add_library(pikiwidb-folly OBJECT ${FOLLY_SRC})
 target_include_directories(pikiwidb-folly INTERFACE .)
-
-find_package(pikiwidb-boost)
-find_package(glog)
-find_package(double-conversion)
-find_package(fmt)
-
-if(NOT glog_FOUND OR NOT double-conversion_FOUND OR NOT fmt_FOUND)
-  message(FATAL_ERROR "dependencies not meet")
-endif()
-
-target_link_libraries (pikiwidb-folly pikiwidb-boost glog double-conversion fmt)
