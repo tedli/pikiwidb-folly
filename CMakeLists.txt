@@ -6,8 +6,7 @@ project(pikiwidb-folly
 
 set(CMAKE_CXX_STANDARD 20)
 
-file(GLOB_RECURSE FOLLY_SRC ${PROJECT_SOURCE_DIR}/folly/*.cpp)
+aux_source_directory(. FOLLY_SRC)
 add_compile_definitions(FOLLY_NO_CONFIG)
 
-add_library(pikiwidb-folly OBJECT ${FOLLY_SRC})
-target_include_directories(pikiwidb-folly INTERFACE ${PROJECT_SOURCE_DIR})
+add_library(pikiwidb-folly ${FOLLY_SRC})
