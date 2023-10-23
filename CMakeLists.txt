@@ -10,4 +10,4 @@ file(GLOB_RECURSE FOLLY_SRC ${PROJECT_SOURCE_DIR}/folly/*.cpp)
 add_compile_definitions(FOLLY_NO_CONFIG)
 
 add_library(pikiwidb-folly ${FOLLY_SRC})
-target_include_directories(folly PUBLIC $<TARGET_PROPERTY:${PROJECT_SOURCE_DIR}>)
+target_include_directories(pikiwidb-folly PUBLIC $<TARGET_PROPERTY:${PROJECT_SOURCE_DIR}>)
